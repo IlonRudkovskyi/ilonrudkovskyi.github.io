@@ -1,0 +1,67 @@
+body {
+    background-size: 100%;
+    background-repeat:repeat;
+    margin: 0px;
+}
+#Menu{
+    display: flex;
+        justify-content: space-around;
+    background: rgba(128, 128, 128);
+    background: linear-gradient(0deg,
+    rgba(128,128,128,0)0%,
+    rgba(128,128,128,0.7)30%,
+    rgba(128,128,128,0.5)100%);
+    padding: 31px;
+    margin-bottom: 20px;
+}
+.textboxbg{
+    display: flex;
+        justify-content: center ;
+      background: radial-gradient(
+      rgba(256, 256, 256, 0), rgba(256, 256, 256, 0.3) 70%, rgba(256, 256, 256, 0)
+      );
+      margin: 10%;
+    padding:5px;
+    border-radius: 3px;
+}
+.textbox{
+width: 100%;
+height: 100%;
+    padding: 5px;
+          background: rgba(128, 128, 128, 0.5);
+    border-radius: 3px;
+}
+#phdiv{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+#ph {
+    border-radius: 100%
+        
+}
+#hdname{
+    display: flex;
+    justify-content: center;
+    font: 46px Segoe Script;
+}
+#location{
+    display: flex;
+    justify-content: space-evenly;
+}
+#map{
+    width: 40%;
+}
+#contact{
+    font: 24px Segoe Print;
+}
+#list{
+     list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#lore{
+    font: 24px Segoe Print;
+}
