@@ -40,5 +40,21 @@
         </div>
         <div id="map">
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yi--8tHh5tE?si=YhBer-JXvKaEPJEZ&amp;controls=0&amp;start=73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <audio id="myAudio" controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  // Функция для автовоспроизведения аудио по таймеру
+  function autoPlayOnTimer() {
+    var audio = document.getElementById("myAudio");
+    audio.currentTime = 73; // Установка времени начала воспроизведения в 73 секунды
+    audio.play(); // Запуск воспроизведения аудио
+  }
+
+  // Установка таймера для автовоспроизведения аудио через 5 секунд (5000 миллисекунд)
+  setTimeout(autoPlayOnTimer, 1000);
+</script>
         </body>
 </html>
