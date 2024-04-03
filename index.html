@@ -40,21 +40,24 @@
         </div>
         <div id="map">
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yi--8tHh5tE?si=YhBer-JXvKaEPJEZ&amp;controls=0&amp;start=73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <audio id="myAudio" controls>
+<audio id="myAudio" controls>
   <source src="audio.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
 <script>
-  // Функция для автовоспроизведения аудио по таймеру
-  function autoPlayOnTimer() {
+  // Функция для автовоспроизведения аудио после движения мыши
+  function autoPlayOnMouseMove() {
     var audio = document.getElementById("myAudio");
     audio.currentTime = 73; // Установка времени начала воспроизведения в 73 секунды
     audio.play(); // Запуск воспроизведения аудио
+    // Удаление обработчика события, чтобы аудио не запускалось повторно при каждом движении мыши
+    document.removeEventListener("mousemove", autoPlayOnMouseMove);
   }
 
-  // Установка таймера для автовоспроизведения аудио через 5 секунд (5000 миллисекунд)
-  setTimeout(autoPlayOnTimer, 1000);
+  // Добавление обработчика события для движения мыши
+  document.addEventListener("mousemove", autoPlayOnMouseMove);
 </script>
+
         </body>
 </html>
