@@ -1,67 +1,103 @@
 body {
     background-size: 100%;
-    background-repeat:repeat;
+    background-repeat: repeat;
     margin: 0px;
 }
-#Menu{
+
+#Menu {
     display: flex;
-        justify-content: space-around;
+    flex-direction: column; /* Меняем расположение элементов на колонку для мобильных */
+    justify-content: center; /* Выравниваем по центру */
     background: rgba(128, 128, 128);
     background: linear-gradient(0deg,
-    rgba(128,128,128,0)0%,
-    rgba(128,128,128,0.7)30%,
-    rgba(128,128,128,0.5)100%);
-    padding: 31px;
-    margin-bottom: 20px;
+        rgba(128,128,128,0)0%,
+        rgba(128,128,128,0.7)30%,
+        rgba(128,128,128,0.5)100%);
+    padding: 20px; /* Уменьшаем отступы для мобильной версии */
+    margin-bottom: 10px;
 }
-.textboxbg{
+
+.textboxbg {
     display: flex;
-        justify-content: center ;
-      background: radial-gradient(
-      rgba(256, 256, 256, 0), rgba(256, 256, 256, 0.3) 70%, rgba(256, 256, 256, 0)
-      );
-      margin: 10%;
-    padding:5px;
-    border-radius: 3px;
-}
-.textbox{
-width: 100%;
-height: 100%;
+    justify-content: center;
+    background: radial-gradient(
+        rgba(256, 256, 256, 0), rgba(256, 256, 256, 0.3) 70%, rgba(256, 256, 256, 0)
+    );
+    margin: 5%; /* Уменьшаем внешний отступ для мобильных */
     padding: 5px;
-          background: rgba(128, 128, 128, 0.5);
     border-radius: 3px;
 }
-#phdiv{
+
+.textbox {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 3px;
+}
+
+#phdiv {
     display: flex;
     justify-content: center;
     margin: 2%;
 }
+
 #ph {
-    border-radius: 100%
-        
+    border-radius: 100%;
 }
-#hdname{
+
+#hdname {
     display: flex;
     justify-content: center;
-    font: 46px Segoe Script;
+    font-size: 36px; /* Уменьшаем размер шрифта для мобильной версии */
+    font-family: 'Segoe Script', sans-serif;
 }
-#location{
+
+#location {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column; /* Ставим элементы в колонку для мобильных */
+    justify-content: center;
 }
-#map{
-    width: 40%;
+
+#map {
+    width: 90%; /* Увеличиваем ширину карты, чтобы она занимала больше пространства на экране */
 }
-#contact{
-    font: 24px Segoe Print;
+
+#contact {
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    font-family: 'Segoe Print', sans-serif;
 }
-#list{
-     list-style-type: none;
+
+#list {
+    list-style-type: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-#lore{
-    font: 24px Segoe Print;
+
+#lore {
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    font-family: 'Segoe Print', sans-serif;
+}
+
+/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
+@media (max-width: 768px) {
+    #Menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #hdname {
+        font-size: 32px; /* Ещё уменьшаем шрифт */
+    }
+
+    #contact, #lore {
+        font-size: 16px;
+    }
+
+    #map {
+        width: 100%;
+    }
 }
